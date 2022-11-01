@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:PokemonApp.Maui.ViewModels"
+             x:Class="PokemonApp.Maui.MainPage"
+             Title="PokemonApp - Menu">
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button
+                x:Name="btStart"
+                Text="Start"
+                HorizontalOptions="Center"
+                Command="{Binding StartCommand}"/>
+
+            <Button
+                x:Name="btQuit"
+                Text="Quit"
+                HorizontalOptions="Center"
+                Command="{Binding QuitCommand}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
